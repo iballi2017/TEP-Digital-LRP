@@ -1,0 +1,76 @@
+@use "../_abstracts/colors";
+@use "../_partials/mixins";
+input[type="text"],
+input[type="password"],
+select.form-control {
+    &.form-control {
+        // border-radius: 0;
+        border: none;
+        // padding: 0.5em 0.6em;
+        // font-size: 0.88rem;
+        background: #f0f0f0;
+        border-radius: 10px;
+        height: 45px;
+        &:focus {
+            outline: 0;
+            box-shadow: none;
+            // border: 1px solid colors.$successColor;
+        }
+    }
+}
+
+select {
+    @include mixins.appearance(none);
+    option {
+        margin: 5em;
+        line-height: 2;
+        font: inherit;
+    }
+    &::after {
+        content: "hhhhh";
+    }
+}
+
+.select-drop-wrapper {
+    position: relative;
+    height: 45px;
+    * {
+        cursor: pointer;
+    }
+    &::after {
+        // @include after('\f0d7', 20px);
+        @include mixins.after("\f0dd", 20px);
+        position: absolute;
+        right: 0.5rem;
+        color: #73cf48;
+        pointer-events: none;
+        top: 5px;
+    }
+}
+
+.form-label {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    color: #1e1e1e;
+    margin-bottom: 1.2em;
+    cursor: pointer;
+}
+
+#inputTypeToggler {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    &::after {
+        content: "";
+        display: block;
+        background-image: url("../assets/images/icons/ant-design_eye-invisible-outlined.svg");
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+    }
+}

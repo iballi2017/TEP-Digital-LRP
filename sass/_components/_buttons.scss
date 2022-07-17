@@ -1,0 +1,29 @@
+@use "../_abstracts/colors";
+@use "../_partials/mixins";
+.btn {
+    border: none;
+    @include mixins.transition(all 300ms ease-in-out);
+    &:focus {
+        border: none;
+        outline: 0;
+        box-shadow: none;
+    }
+}
+
+.primary-btn {
+    background-color: colors.$primaryColor;
+    color: #ffffff;
+    &:hover {
+        color: #ffffff;
+        background-color: colors.$primaryColorDark;
+    }
+}
+
+.form-btn {
+    height: 45px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+}
