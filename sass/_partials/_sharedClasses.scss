@@ -13,3 +13,11 @@
     background-attachment: fixed;
     min-height: 100vh;
 }
+
+
+
+.list-style-none {
+    >li {
+        list-style: none;
+    }
+}
