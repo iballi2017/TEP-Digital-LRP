@@ -18,17 +18,38 @@
                             <input type="text" id="FullName" class="form-control">
                         </div>
                         <div class="form-group">
+                            <label for="EmailAddress" class="form-label text-uppercase">Email Address</label>
+                            <input type="text" id="EmailAddress" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="Party" class="form-label text-uppercase">Select Party</label>
+                            <div class="d-flex flex-wrap">
+                                <div class="custom-check mr-4">
+                                    <input type="radio" name="Party" id="Operator" name="Operator">
+                                    <label for="Operator" class="check-label">
+                                        <span class="ui-radio"></span>
+                                        Operator
+                                    </label>
+                                </div>
+
+                                <div class="custom-check">
+                                    <input type="radio" name="Party" id="ParentGuardian" name="ParentGuardian">
+                                    <label for="ParentGuardian" class="check-label">
+                                        <span class="ui-radio"></span>
+                                        Parent/Guardian
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label for="Gender" class="form-label text-uppercase">Gender</label>
                             <div class="select-drop-wrapper">
                                 <select name="Gender" id="Gender" class="form-control">
                                     <option value="male">Male</option>
-                                    <option value="fmail">Female</option>
+                                    <option value="femail">Female</option>
+                                    <option value="other">Other</option>
                                 </select>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="EmailAddress" class="form-label text-uppercase">Email Address</label>
-                            <input type="text" id="EmailAddress" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="Password" class="form-label text-uppercase">Password</label>

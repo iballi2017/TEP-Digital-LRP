@@ -141,6 +141,109 @@ select::after {
   background-size: contain;
 }
 
+.custom-check input[type=radio] {
+  position: absolute;
+}
+.custom-check label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.custom-check .ui-radio,
+.custom-check .ui-check {
+  display: block;
+  width: 1.2rem;
+  min-width: 1.2rem;
+  height: 1.2rem;
+  left: 409px;
+  top: 450px;
+  background: #ffffff;
+  border: 5px solid #F0F0F0;
+  box-sizing: border-box;
+  margin-right: 1em;
+}
+.custom-check .ui-check {
+  border-radius: 3px;
+}
+.custom-check .ui-radio {
+  border-radius: 50%;
+}
+.custom-check input[type=checkbox],
+.custom-check input[type=radio] {
+  position: absolute;
+  opacity: 0;
+}
+.custom-check input[type=checkbox]:checked + label .ui-radio,
+.custom-check input[type=checkbox]:checked + label .ui-check,
+.custom-check input[type=radio]:checked + label .ui-radio,
+.custom-check input[type=radio]:checked + label .ui-check {
+  padding: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border: 5px solid #F0F0F0;
+  background: #6cd33b;
+}
+.custom-check input[type=checkbox]:checked + label .ui-radio::before,
+.custom-check input[type=checkbox]:checked + label .ui-check::before,
+.custom-check input[type=radio]:checked + label .ui-radio::before,
+.custom-check input[type=radio]:checked + label .ui-check::before {
+  color: #ffffff;
+}
+
+#levels-navigation {
+  background: #1e2b19;
+  border-radius: 10px;
+  padding: 0.95em 1.2em;
+}
+#levels-navigation .title {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 41px;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+#levels-navigation #navigation-items {
+  background-color: #FFFFFF;
+  list-style: none;
+  padding-left: 0;
+}
+#levels-navigation #navigation-items li a {
+  display: block;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #9d9d9d;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  color: #9d9d9d;
+  text-decoration: none;
+  height: 78px;
+}
+#levels-navigation #navigation-items li.active a {
+  background-color: red;
+  background: #73cf48;
+  border: 8px solid #fbff45;
+  border-radius: 10px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+
 .list-style-none > li {
   list-style: none;
 }
@@ -265,48 +368,56 @@ select::after {
   max-width: 400px;
 }
 
-#toolbar .inner-wrapper {
+.check-label {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: capitalize;
+  color: #1e1e1e;
+}
+
+#question-type-options-page #toolbar .inner-wrapper {
   display: flex;
   align-items: center;
 }
-#toolbar .inner-wrapper li {
+#question-type-options-page #toolbar .inner-wrapper li {
   flex-basis: 40%;
   text-align: center;
 }
-#toolbar .inner-wrapper li:first-child {
+#question-type-options-page #toolbar .inner-wrapper li:first-child {
   flex-basis: 30%;
   text-align: left;
 }
-#toolbar .inner-wrapper li:last-child {
+#question-type-options-page #toolbar .inner-wrapper li:last-child {
   flex-basis: 30%;
   text-align: right;
 }
-
-#social-handles {
+#question-type-options-page #social-handles {
   display: flex;
   align-items: center;
 }
-#social-handles li {
+#question-type-options-page #social-handles li {
   margin-right: 1em;
   max-width: 80px;
 }
-#social-handles li a {
+#question-type-options-page #social-handles li a {
   display: block;
   transition: 300ms ease-in-out;
   -webkit-transition: 300ms ease-in-out;
   -ms-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
 }
-#social-handles li a:hover {
+#question-type-options-page #social-handles li a:hover {
   -webkit-transform: scale(1.08);
   -ms-transform: scale(1.08);
   transform: scale(1.08);
 }
-#social-handles li:last-child {
+#question-type-options-page #social-handles li:last-child {
   margin-right: 0;
 }
-
-h1 {
+#question-type-options-page h1 {
   font-family: "Montserrat Subrayada", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -315,17 +426,16 @@ h1 {
   color: #ffffff;
   margin: 0 auto;
 }
-
-.account-link #user-account-avatar {
+#question-type-options-page .account-link #user-account-avatar {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
 }
-.account-link #user-account-avatar .image-wrapper {
+#question-type-options-page .account-link #user-account-avatar .image-wrapper {
   max-width: 80px;
 }
-.account-link p {
+#question-type-options-page .account-link p {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
@@ -334,8 +444,7 @@ h1 {
   text-transform: capitalize;
   color: #ffffff;
 }
-
-#content .content-wrapper {
+#question-type-options-page #content .content-wrapper {
   background: #1d1d1d;
   border: 15px solid #4a4a4a;
   border-radius: 20px;
@@ -345,7 +454,7 @@ h1 {
   position: relative;
   margin-top: 8em;
 }
-#content .content-label {
+#question-type-options-page #content .content-label {
   max-width: 318px;
   margin: 0 auto;
   background: #000000;
@@ -358,7 +467,7 @@ h1 {
   text-align: center;
   margin-top: -8em;
 }
-#content .content-label h2 {
+#question-type-options-page #content .content-label h2 {
   color: #ffffff;
   font-family: "Open Sans";
   font-style: normal;
@@ -368,13 +477,13 @@ h1 {
   line-height: 167.68%;
   text-transform: capitalize;
 }
-#content .type-option {
+#question-type-options-page #content .type-option {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   margin-top: 3em;
 }
-#content .type-option li .card {
+#question-type-options-page #content .type-option li .card {
   border: 7px solid #e4e4e4;
   border-radius: 10px;
   cursor: pointer;
@@ -383,7 +492,7 @@ h1 {
   -ms-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
 }
-#content .type-option li .card .card-text {
+#question-type-options-page #content .type-option li .card .card-text {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -393,10 +502,166 @@ h1 {
   text-transform: capitalize;
   color: #1e1e1e;
 }
-#content .type-option li .card:hover {
+#question-type-options-page #content .type-option li .card:hover {
   -webkit-transform: scale(1.08);
   -ms-transform: scale(1.08);
   transform: scale(1.08);
+}
+
+#candidate-selection-count-page .card {
+  max-width: 300px;
+  margin: 5em auto;
+  border: none;
+}
+#candidate-selection-count-page .card-header {
+  background-color: #444444;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 36px;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+#candidate-selection-count-page #count-control {
+  justify-content: center;
+  margin: 3em auto;
+}
+#candidate-selection-count-page #count-control #count {
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #d9d9d9;
+  padding-left: 20%;
+  width: calc(85% - 69px);
+}
+#candidate-selection-count-page #count-control #count:focus {
+  border: 1px solid #d9d9d9;
+  outline: 0;
+  box-shadow: none;
+}
+#candidate-selection-count-page #controller {
+  display: flex;
+  flex-direction: column;
+}
+#candidate-selection-count-page #controller .btn {
+  width: 69px;
+  height: 34px;
+}
+#candidate-selection-count-page #controller .arrow-up-btn,
+#candidate-selection-count-page #controller .arrow-down-btn {
+  border: 1px solid #d9d9d9;
+  border-left: none;
+}
+#candidate-selection-count-page #controller .arrow-up-btn {
+  border-radius: 0 5px 0 0;
+}
+#candidate-selection-count-page #controller .arrow-up-btn::before {
+  content: url(../assets/images/icons/caret-up-green-icon.svg);
+  color: #ffffff;
+  width: 5px;
+}
+#candidate-selection-count-page #controller .arrow-down-btn {
+  border-top: none;
+  border-radius: 0 0 5px 0;
+}
+#candidate-selection-count-page #controller .arrow-down-btn::before {
+  content: url(../assets/images/icons/caret-down-green-icon.svg);
+}
+#candidate-selection-count-page #action-btn {
+  display: flex;
+  flex-direction: column;
+}
+#candidate-selection-count-page #action-btn button {
+  height: 65px;
+  color: #ffffff;
+  border-radius: 10px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+#candidate-selection-count-page #action-btn button[type=submit] {
+  background: #73cf48;
+  margin-bottom: 1.15em;
+}
+#candidate-selection-count-page #action-btn button[type=submit]:hover {
+  background: rgba(115, 207, 72, 0.8);
+}
+#candidate-selection-count-page #action-btn button[type=button] {
+  height: 65px;
+  background: #d93333;
+}
+#candidate-selection-count-page #action-btn button[type=button]:hover {
+  background: rgba(217, 51, 51, 0.8);
+}
+
+#level-and-stage-selection-page #top-bar {
+  --width: 34px;
+  display: flex;
+}
+#level-and-stage-selection-page .back-btn-wrapper {
+  margin-right: 20px;
+}
+#level-and-stage-selection-page h2 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 34px;
+  color: #ffffff;
+}
+#level-and-stage-selection-page main {
+  padding: 0.95em 1.2em;
+}
+#level-and-stage-selection-page #back-btn {
+  background: #444444;
+  border-radius: 7px;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  padding: 0.8em 1.2em;
+}
+#level-and-stage-selection-page #back-btn::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url(../assets/images/icons/left-arrow-white-icon.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#level-and-stage-selection-page #back-btn + div {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+#level-and-stage-selection-page #back-btn,
+#level-and-stage-selection-page #title-bar {
+  height: 66px;
+}
+#level-and-stage-selection-page #title-bar {
+  width: calc(100% - var(--width) - 20px);
+  background: #009cf3;
+  border-radius: 10px;
+  padding: 0.8em 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#level-and-stage-selection-page #title-bar h1 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 27px;
+  text-transform: capitalize;
+  color: #ffffff;
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.min.css.map */
